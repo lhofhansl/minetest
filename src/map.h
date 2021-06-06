@@ -409,6 +409,7 @@ public:
 
 	MapSettingsManager settings_mgr;
 
+	MapDatabase *getDatabase() { return dbase; }
 private:
 	// Emerge manager
 	EmergeManager *m_emerge;

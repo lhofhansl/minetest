@@ -374,6 +374,8 @@ public:
 	// Environment mutex (envlock)
 	std::mutex m_env_mutex;
 
+	void init();
+
 private:
 	friend class EmergeThread;
 	friend class RemoteClient;
@@ -394,8 +396,6 @@ private:
 		private:
 			float m_timer = 0.0f;
 	};
-
-	void init();
 
 	void SendMovement(session_t peer_id);
 	void SendHP(session_t peer_id, u16 hp);
